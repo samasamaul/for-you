@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my gift for you^^</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js" ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="message" class="waiting-message">
+      Belum waktunya yah
+    </div>
+    <p id="countdown" style="font-size: 20px; font-family: 'Josefin Sans', sans-serif; color: #6b4226"></p>
+    <div id="content" style="display: none">
+      <div class="section section-1">
+        <div class="greeting">Happy Birthday and Happy Valentine</div>
+      </div>
+      <img src="./hadiah.png" style="width: 200px" />
+      <div class="section section-2">
+        <div class="wrapper">
+          <div class="lined-paper">
+            <p>To: Ririana Adelia Putrilana Ozora</p>
+            <p>Happy 19th Birthday and Valentine.<img src="./habede.png" style="width: 60px; position: absolute; top: 40px; left: 20px" /> Your birthday is very special, same as valentine, I like that^^. Umm... this is my first time saying valentine to a girl, sorry if it's a bit annoying.</p>
+            <p>I hope you stay healthy and we stay friends, maybe not friendsanymore?? lvl 2 friends?? HAHAHAHAHAHA (cringe jir)</p>
+            <p>Nvm, I just want to tell you that I love you.</p>
+            <p>I like ur face (even though I've forgotten, it's been so long)<br/>i like ur voice to!! SUCH A CUTE VOICE, I LOVE IT<br/>ur personality too, very kind to everyone, especially to me xixixi<br/>out of all that, you should know that I like everything about you.</p>
+            <p>Do you remember, the first time I knew you, I was very nervous especially knowing from ur friends that you like me. If I remember, I feel embarrassed but on the other hand I'm happy because someone likes me, but I also wonder, what does this person want from me?</p>
+            <p>Some songs also remind me of you, especially seasons w2e, the first song I knew from you, until now I still listen to it, even when making this and I really like it. </p>
+            <p>Tetap semangat sekolahnya, jangan malas malasan, katanya pengen kuliah ke univ top, tak doain semoga keterima xixixix </p>
+            <p>Semoga ini terakhir kalinya aku ngucapin valentine sama ultahmu pake ini, mungkin kedepannya pengen tak ucapin langsung^^ (doakan saja)</p>
+            <p>Maaf gabisa kasih apa apa, cuma bisa buatin ini sama dibawah ada hadiah, di klik ya!! aku gatau kamu suka e bunga apa, tapi menurutku bagus kok </p>
+            <button class="btn btn-sm" style="background-color: #ffeed1" data-toggle="modal" data-target="#flowerModal" >
+              for u ^^
+            </button>
+            <p style="text-align: right">ur biggest fans,<br /><b>samsulek</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="flowerModal" tabindex="-1" aria-labelledby="flowerModalLabel" aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <model-viewer src="flower_bouquet.glb" autoplay camera-controls disable-zoom auto-rotate style="width: 100%; height: 400px; border: none" ></model-viewer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const targetTime = new Date(2025, 1, 13, 0, 51, 0);
+
+        const countdownElement = document.getElementById("countdown");
+
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const timeLeft = targetTime - now;
+
+          if (timeLeft <= 0) {
+            location.reload();
+          } else {
+            const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+            const seconds = Math.floor((timeLeft / 1000) % 60);
+
+            countdownElement.innerHTML = `Ready in : ${hours}:${minutes}:${seconds}`;
+
+            setTimeout(updateCountdown, 1000);
+          }
+        }
+
+        if (new Date().getTime() >= targetTime) {
+          message.style.display = "none";
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+          updateCountdown();
+        }
+      });
+    </script>
+  </body>
+</html>

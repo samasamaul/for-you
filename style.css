@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.waiting-message {
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    text-align: center;
+    color: #D77A61;
+    margin-top: 20%;
+}
+
+body {
+    text-align: center;
+    background-color: #F8F5E9;
+    color: #E5D0AC;
+    margin: 0;
+    padding: 0;
+}
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.section-2 {
+    position: relative;
+}
+.greeting {
+    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #D77A61;
+}
+.lined-paper {
+    margin: 10px auto;
+    padding: 25px 20px 20px 20px;
+    background: repeating-linear-gradient(white, white 24px, #fceabb 25px);
+    border: 2px solid #EBE0A4;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 95%;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.2em;
+    color: #000;
+    line-height: 25px;
+    min-height: 150px;
+    overflow-wrap: break-word;
+    text-align: left;
+    position: relative;
+}
+.lined-paper p {
+    margin-bottom: 25px;
+}
